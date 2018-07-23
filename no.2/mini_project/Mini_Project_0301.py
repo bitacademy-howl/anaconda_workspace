@@ -26,5 +26,5 @@ plt.show()
 
 result = df2.get('sizeOfsite')[df2.get('sizeOfsite') < 500]
 
-plt.hist(result,bins=20,color='green', density=True)
+plt.hist(result,bins=50,color='green', density=True)
 plt.show()
