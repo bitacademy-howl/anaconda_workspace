@@ -31,11 +31,21 @@ print(lm.coef_)
 #
 print(lm.intercept_)
 # #
+
+
 R2 = lm.score(X,Y)
+print(R2)
 abs_corr = np.sqrt(R2)
+print(abs_corr)
+
 #
 # #
 plt.scatter(X[:], Y[:], c = 'g', s = 15, alpha=0.5)
 plt.xlabel("H")
 plt.ylabel("HR")
 plt.show()
+
+X = X.reshape(-1)
+Y = Y.reshape(-1)
+print(X)
+print(np.corrcoef(X, Y))
