@@ -15,13 +15,11 @@ print(df)
 
 X = np.array([df['H']])
 Y = np.array([df['HR']])
+
 X = X.reshape(-1, 1)
-Y = Y.reshape(-1,1)
+Y = Y.reshape(-1, 1)
 print(X.shape)
 print(Y.shape)
-
-# X.reshape()
-
 
 print(X, Y, type(X))
 
@@ -31,21 +29,13 @@ lm.fit(X, Y)
 # #
 print(lm.coef_)
 #
-#
 print(lm.intercept_)
 # #
-# pd.DataFrame(lm.coef_, columns=df.head())
-# #
-#
-#
 R2 = lm.score(X,Y)
 abs_corr = np.sqrt(R2)
-#
-#
 #
 # #
 plt.scatter(X[:], Y[:], c = 'g', s = 15, alpha=0.5)
 plt.xlabel("H")
 plt.ylabel("HR")
 plt.show()
-
