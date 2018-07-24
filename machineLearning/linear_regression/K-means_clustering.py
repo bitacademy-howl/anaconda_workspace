@@ -143,3 +143,5 @@ table = np.unique(clusters,return_counts=True)
 # 군집화 한 후에 그것의 합을 형상비교????
 
 # 아몰랑
+
+
