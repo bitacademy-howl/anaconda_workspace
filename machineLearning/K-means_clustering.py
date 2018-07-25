@@ -87,7 +87,6 @@ plt.show()
 
 
 
-
 plt.scatter(X[:, 0], X[:, 1], c='red',alpha=0.5)
 plt.show()
 
