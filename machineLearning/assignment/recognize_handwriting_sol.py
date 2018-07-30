@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics, preprocessing
 from scipy.ndimage.interpolation import rotate
 
-os.chdir(r"C:\Users\bit\Desktop\20180717_머신러닝 알고리즘과 응용\data")
+os.chdir(r"D:\1. stark\anaconda_workspace\no.2\머신러닝 알고리즘과 응용\data")
 data_train = pd.read_csv('data_mnist_train_100.csv', header=None,encoding='latin1')
 data_test = pd.read_csv('data_mnist_test_100.csv', header=None,encoding='latin1')
 
@@ -25,10 +25,14 @@ def show_data(X, Y, n, angle=0):
     plt.imshow(image_matrix, cmap='Greys',interpolation='None')
     print(Y[n])
 
-show_data(X_train, Y_train, 99, -10)
+# show_data(X_train, Y_train, 99, -10)
+
 
 estimator_grid = np.arange(20, 51, 10)
+print("estimator_grid_array : ", estimator_grid)
+
 depth_grid = np.arange(10, 31, 2)
+
 parameters = {'n_estimators': estimator_grid, 'max_depth': depth_grid}
 gridCV = GridSearchCV(RandomForestClassifier(), param_grid=parameters, cv=10)
 gridCV.fit(X_train, Y_train)

@@ -30,7 +30,6 @@ plt.show()
 mycolors = {'setosa':'green', 'virginica':'blue', 'versicolor':'red'}
 plots = pd.plotting.scatter_matrix(df,c=np.vectorize(mycolors.get)(Y),alpha=0.8,marker='o',s=10)
 
-
 print(len(plots))
 print(plots[0][0])
 print(plots[0][1])
