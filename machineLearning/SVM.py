@@ -28,8 +28,6 @@ X = IPT.fit_transform(X)
 X = preprocessing.scale(X)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.5, random_state=3)
 
-
-
 C_grid = [0.001, 0.01, 0.1, 1, 10]
 gamma_grid = [0.001, 0.01, 0.1, 1]
 parameters = {'C': C_grid, 'gamma' : gamma_grid}

@@ -36,7 +36,18 @@ print(plots[0][1])
 print(plots[0][2])
 print(plots[0][3])
 
-#
+
 # for plot in plots:
-#     plt.subplot(plot)
+#     plot.subplot(plot)
 #     plt.show()
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=5)
+
+GNB = GaussianNB()
+GNB.fit(X_train,Y_train)
+Y_pred_test = GNB.predict(X_test)
+
+conf_mat = metrics.confusion_matrix(Y_test,Y_pred_test)
+print(conf_mat)
+
+accuracy = metrics.accuracy_score(Y_test, Y_pred_test)
+print('Accuracy    = ' + str(np.round(accuracy,2)))
