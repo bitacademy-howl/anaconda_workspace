@@ -77,7 +77,7 @@ corr_df = np.round(df.corr(),3)
 print(corr_df)
 
 # ,marker='o',s=10
-pd.plotting.scatter_matrix(df,alpha=0.8, diagonal='kde');
+pd.plotting.scatter_matrix(df,alpha=0.8, diagonal='kde')
 
 # os.chdir(r'D:\1. stark\temp')
 #

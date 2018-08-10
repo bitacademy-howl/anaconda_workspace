@@ -36,7 +36,7 @@ Y = LE.fit_transform(Y)
 table = itemfreq(Y)
 print(table)
 
-
+# 널처리..
 IPT = preprocessing.Imputer()
 X = IPT.fit_transform(X)
 
